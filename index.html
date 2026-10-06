@@ -215,7 +215,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Prime Painting. All rights reserved. | <a href="mailto:freeestimates@primepaintingnow.com">freeestimates@primepaintingnow.com</a></p>
+      <p>&copy; <span id="year">2026</span> Prime Painting. All rights reserved. | <a href="mailto:freeestimates@primepaintingnow.com">freeestimates@primepaintingnow.com</a></p>
     </div>
   </footer>
 
@@ -233,6 +233,9 @@
     const toggleBackToTop = () => backToTop.classList.toggle('visible', window.scrollY > 400);
     window.addEventListener('scroll', toggleBackToTop, { passive: true });
     toggleBackToTop();
+
+    // Keep the footer copyright year current
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
   <script type="application/ld+json">
